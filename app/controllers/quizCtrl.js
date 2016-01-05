@@ -7,11 +7,11 @@ app.controller("quizCtrl", ["$scope", "$firebaseAuth","$firebaseArray", "$locati
 		var ref = new Firebase('https://co-read-quiz.firebaseio.com/' + bookID + "/noteDetail");
 		
 		var notes = $firebaseArray(ref);
-		var keepWords = ["am", "are", "is", "was", "were", "be", "being", "been", 
+		var keepWords = ["am", "A", "are", "is", "was", "were", "be", "being", "been", 
 							"have", "has", "had", "shall", "will", "do", "does", "did", 
 							"may", "must", "might", "can", "can't", "could", "would", "should",
 							 "a", "an", "the", "and", "or", "some", "here", "who", "what", 
-							 "when", "where", "how", "why", "in", "There", "When" ];
+							 "when", "where", "how", "why", "in", "There", "When", "This"];
 		notes.$loaded(
 
 			function findWord (notes){

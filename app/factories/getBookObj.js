@@ -10,7 +10,22 @@ app.factory("getBookObj", [function () {
 			bookID = value;
 			return bookID;
 
+		},
+		setDetailID: function(value){
+			detailID = value;
+			return detailID;
+		},
+		getDetailID: function() {
+			return detailID;
+		},
+		setNoteID: function(value) {
+			noteID = value;
+			return noteID;
+		},
+		getNoteID: function() {
+			return noteID;
 		}
+
 
 
 	}

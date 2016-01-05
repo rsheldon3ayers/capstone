@@ -36,7 +36,7 @@ app.controller("mainCtrl", ["$scope", "$firebaseAuth", "$location", "$firebaseAr
 
 	};
 	$scope.viewBook = function () {
-
+		
 		$location.path('/QuizApp/books');
 	}
 

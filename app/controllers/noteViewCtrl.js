@@ -14,10 +14,26 @@ app.controller("noteViewCtrl", ["$scope", "$firebaseAuth", "$location", "$fireba
 		console.log($scope.detail);
 		
 
+		$scope.remove = function (detail, note) {
+
+			console.log(detail, note);
+			var noteRef = new Firebase("https://co-read-quiz.firebaseio.com/" + bookID + "/notes/" + note.$id);
+			var detailRef = new Firebase("https://co-read-quiz.firebaseio.com/" + bookID + "/noteDetail/" + detail.$id);
+			
+			console.log(noteRef);
+			noteRef.remove();
+			detailRef.remove();
+		};
 
 
 
-
+		$scope.edit = function (detail, note) {
+		
+			
+			getBookObj.setDetailID(detail.$id);
+			getBookObj.setNoteID(note.$id);
+			$location.path('/QuizApp/editNote');
+		}
 
 
 

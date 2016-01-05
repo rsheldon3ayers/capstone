@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+    <div class="navbar-header">
+      
+      <button><a href="/?#/QuizApp/notes"> Add Note</a></button>
+      <button><a href="/?#/QuizApp/books"> View Books</a></button>
+
+  </div>
+  </div>
+</nav>
+
+<div class="panel panel-primary styleThis">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+						Edit note
+					</h3>
+      </div>
+      <div class="panel-body">
+       	<input class ="form-control" type="text" ng-model="userDetail" value="{{detail.$value}}">
+       	
+			<textarea class="form-control" rows="10" ng-model="userEdits">{{note.$value}}</textarea>
+		
+	  </div>	
+
+
+     
+      <div class="panel-footer">
+       <button class="btn btn-deafult" ng-click="update(userEdits, userDetail)">Update Note</button>
+      </div>
+    </div>

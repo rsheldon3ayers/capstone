@@ -21,16 +21,17 @@ app.controller("bookCtrl", ["$scope", "$firebaseAuth","$firebaseArray", "$locati
 
 				//use this to make sure book has notes
 
-				// if(book.notes === undefined){
-				// 	console.log("good thinking, Roger");
-				// }
+				if(book.notes === undefined){
+
+					$location.path('/QuizApp/notes');
+				} else {
 				
 				 $scope.myShow = true;
 				 $scope.myNotes = false;
 				 $location.path('/QuizApp/quiz');
 				 // $scope.userISBN = userISBN;
 				 // console.log($scope.myShow, $scope.userISBN);
-
+				};
 
 		};
 		$scope.show = function() {
@@ -61,15 +62,36 @@ app.controller("bookCtrl", ["$scope", "$firebaseAuth","$firebaseArray", "$locati
 		};
 		$scope.onView = function (book) {
 			getBookObj.setBookID(book.$id);
-		  $location.path('/QuizApp/quiz');
-	};
+
+			if(book.notes === undefined){
+				$location.path('/QuizApp/notes');
+				} else {
+		  	
+		  		$location.path('/QuizApp/quiz');
+		  		};
+			};
 
 
 		$scope.go = function ( path ) {
-  		$location.path( path );
-  		console.log("works");
-		};
+  			$location.path( path );
+  			console.log("works");
+			};
+		
+		$scope.logOut = function(userID) {
+		
+			var ref = new Firebase("https://co-read-quiz.firebaseio.com/");
+			var auth = $firebaseAuth(ref);
+    		ref.unauth();
+    		$location.path('/QuizApp/login');
+  			};
 
+  		$scope.remove = function(book) {
+
+  			var ref = new Firebase("https://co-read-quiz.firebaseio.com/" + book.$id );
+  			ref.remove();
+  			$location.path('/QuizApp/books');
+  			console.log(book);
+  		}
 
 	console.log($scope.books);
 

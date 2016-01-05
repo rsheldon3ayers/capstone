@@ -23,8 +23,12 @@ app.config(["$routeProvider", function ($routeProvider) {
         controller: 'quizCtrl'
       }).
       when('/QuizApp/noteView', {
-      	templateUrl: 'templates/noteView.html',
-      	controller: 'noteViewCtrl'
+        templateUrl: 'templates/noteView.html',
+        controller: 'noteViewCtrl'
+      }).
+      when('/QuizApp/editNote', {
+      	templateUrl: 'templates/editNote.html',
+      	controller: 'editCtrl'
       })
       .otherwise({
         redirectTo: '/QuizApp/login'
