@@ -1,31 +1,25 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button ng-click="go('/QuizApp/main')">Add book</button>
-      <button class = "logout" ng-click="logOut(userID)">Log Out</button>
-	</div>
-  </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button ng-click="go('/QuizApp/main')">Add book</button>
+            <button class="logout" ng-click="logOut(userID)">Log Out</button>
+        </div>
+    </div>
 </nav>
 <div class="col-sm-3" ng-repeat="book in books | filter: {userID: userID} " ng-model="books">
     <div class="thumbnail">
-    <a href="?#/QuizApp/books" ng-click="remove(book)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+        <a href="?#/QuizApp/books" ng-click="remove(book)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
         <h3>{{book.title}}</h3>
         <img src="http://covers.openlibrary.org/b/isbn/{{book.userISBN}}-L.jpg">
-      <button class="btn btn-deafult" id="{{book.userISBN}}" ng-click="hide(book)">Add Notes</button>
-      <button class="btn btn-deafult" id="{{book.userISBN}}" data-toggle="modal" data-target="#myModal" ng-click="onView(book)">View Notes</button>
-    
-       
+        <button class="btn btn-deafult" id="{{book.userISBN}}" ng-click="hide(book)">Add Notes</button>
+        <button class="btn btn-deafult" id="{{book.userISBN}}" data-toggle="modal" data-target="#myModal" ng-click="onView(book)">View Notes</button>
     </div>
 
 
-<div ng-show="myShow">
-  <textarea class="form-control" rows="3" ng-model="bookNotes"></textarea>
-  <button class="btn btn-deafult" ng-click="addNotes(book, bookNotes)">Save Notes</button>
+    <div ng-show="myShow">
+        <textarea class="form-control" rows="3" ng-model="bookNotes"></textarea>
+        <button class="btn btn-deafult" ng-click="addNotes(book, bookNotes)">Save Notes</button>
+    </div>
+    <div ng-show="myNotes" ng-repeat="note in book">
+    </div>
 </div>
-<div ng-show="myNotes" ng-repeat="note in book">
-</div>  
-
-
-
-
-</div> 

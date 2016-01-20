@@ -1,32 +1,28 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button><a href="/?#/QuizApp/notes"> Add Note</a></button>
-      <button><a href="/?#/QuizApp/books"> View Books</a></button>
-  </div>
-  </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button><a href="/?#/QuizApp/notes"> Add Note</a></button>
+            <button><a href="/?#/QuizApp/books"> View Books</a></button>
+        </div>
+    </div>
 </nav>
 
-
- 
- 
-
 <div class="container noteView" ng-repeat="details in detail">
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
-      
-       
-          <div class="panel panel-default">
-             <div class="panel-body">
-             <a href="?#/QuizApp/noteView" ng-click="remove(details, notes[$index])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-             <a href="" ng-click="edit(details, notes[$index])"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
-               <h4 class="text-center">{{details.$value}}</h4>
-              
-                  <p>{{notes[$index].$value}}</p>
-                  
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="?#/QuizApp/noteView" ng-click="remove(details, notes[$index])"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                    <a href="" ng-click="edit(details, notes[$index])"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+                    <h4 class="text-center">{{details.$value}}</h4>
+
+                    <p>{{notes[$index].$value}}</p>
+
+                </div>
             </div>
-          </div>
-          
-      </div>
+
+        </div>
     </div>
-  </div>
+</div>

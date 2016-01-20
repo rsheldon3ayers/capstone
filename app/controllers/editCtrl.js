@@ -35,20 +35,4 @@ app.controller("editCtrl", ["$scope", "$firebaseAuth","$firebaseObject", "$locat
 
 			$location.path('/QuizApp/noteView');
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }]);

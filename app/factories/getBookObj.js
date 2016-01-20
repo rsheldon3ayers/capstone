@@ -1,38 +1,33 @@
-app.factory("getBookObj", [function () {
 
-	var bookID = "";
-	return { 
-		getBookID: function () {
+app.factory("getBookObj", [function() {
 
-			return bookID;
-		},
-		setBookID: function (value) {
-			bookID = value;
-			return bookID;
+  var bookID = "";
+  return {
+    getBookID: function() {
 
-		},
-		setDetailID: function(value){
-			detailID = value;
-			return detailID;
-		},
-		getDetailID: function() {
-			return detailID;
-		},
-		setNoteID: function(value) {
-			noteID = value;
-			return noteID;
-		},
-		getNoteID: function() {
-			return noteID;
-		}
+      return bookID;
+    },
+    setBookID: function(value) {
+      bookID = value;
+      return bookID;
 
-
-
-	}
-	
+    },
+    setDetailID: function(value) {
+      detailID = value;
+      return detailID;
+    },
+    getDetailID: function() {
+      return detailID;
+    },
+    setNoteID: function(value) {
+      noteID = value;
+      return noteID;
+    },
+    getNoteID: function() {
+      return noteID;
+    }
 
 
 
-
-
-}]);//end of factory
+  }
+}]); //end of factory
