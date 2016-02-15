@@ -1,0 +1,19 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsheldon3ayers/capstone.git"
+  },
+  "author": "Robert Ayers <rsheldon3ayers@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsheldon3ayers/capstone/issues"
+  },
+  "homepage": "https://github.com/rsheldon3ayers/capstone#readme"
+}
