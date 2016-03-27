@@ -1,0 +1,9 @@
+{
+  "firebase": "co-read-quiz",
+  "public": "./capstone",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
